@@ -1,3 +1,14 @@
+/**
+ * @brief Server declaration and routing
+ * @imports Nickel, STD::Collections, STD::Error
+ * @param address as &str
+ * @return Result<ListeningServer, Box<StdError>>
+ * 
+ * Starts the server and routes to destinations depending on input.
+ *
+ * @author Landon Mote
+ * @date 3.14.2016
+ */
 pub mod serv {
     use nickel::*;
     use std::collections::HashMap;

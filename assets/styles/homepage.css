@@ -3,6 +3,9 @@ body {
   padding-bottom: 40px;
   background-color: #eee;
 }
+.h1 {
+  text-align: center;
+}
 .form-signin {
   max-width: 330px;
   padding: 15px;
@@ -27,12 +30,30 @@ body {
 .form-signin .form-control:focus {
   z-index: 2;
 }
-.form-signin input[type="email"] {
+#username {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.form-signin input[type="password"] {
+#newuser {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#password {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+#passin {
+  margin-bottom: -1px;
+  border-radius: 0;
+}
+#confirm {
+  margin-bottom: -1px;
+  border-radius: 0;
+}
+#email {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
