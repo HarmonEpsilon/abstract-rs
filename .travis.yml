@@ -1,0 +1,8 @@
+language: rust
+rust:
+    - 1.15.1
+os:
+    - windows
+script:
+    - cargo build -v
+    - cargo test
