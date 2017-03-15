@@ -1,0 +1,13 @@
+[package]
+name = "abstract-rs"
+version = "0.1.0"
+authors = ["Landon Mote <landon.mote@gmail.com>"]
+
+[dependencies]
+hyper = "*"
+mysql = "*"
+rustc-serialize = "*"
+bson = "*"
+
+[dependencies.nickel]
+version = "*"
