@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style></style>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Meta tags above must always be first in <head> -->
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+
+        <title>{{ title }}</title>
+
+        <!-- Initializes custom CSS first -->
+        <link href="styles/homepage.css" rel="stylesheet" />
+
+        <!-- Initializes core Bootstrap modules -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+        <!-- jQuery -->
+        <link href="jquery-3.1.1.min.js" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- Creates login form, using POST method for obtaining data -->
+            <form class="form-signin" action="/auth" method="POST">
+                <!-- Headers -->
+                <h1>{{title}}</h1>
+                <h2>Please Sign In</h2>
+
+                <!-- Username input box -->
+                <label class="sr-only" for="username">Username</label>
+                <input class="form-control" id="username" autofocus="" required="" type="username" placeholder="Username" />
+
+                <!-- Password input box -->
+                <label class="sr-only" for"inputPassword">Password</label>
+                <input class="form-control" id="inputPassword" required="" type="password" placeholder="Password" />
+                
+                <!-- Checks to see if user wants to have their credentials remembered -->
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me" />
+                        Remember me
+                    </label>
+                </div>
+
+                <!-- Button to submit credentials -->
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+                <!-- Button to create new account -->
+                <input type="button" class="btn btn-lg btn-primary btn-block" onclick="location.href='signup.html';" value="Create Account"/>
+            </form>
+        </div>
+    </body>
+</html>
