@@ -1,29 +1,46 @@
-/**
- * @brief Main file for execution of Abstract webserver, utilizing Nickel
- * @description
- * 
- * Creates a webserver using Nickel.rs that directs to HTML stored in assets folder
- *
- * @author Landon Mote
- * @date 3.13.2017
- */
+#![feature(plugin)]
+#![plugin(rocket_codegen)]
+
+extern crate rocket_contrib;
+extern crate rocket;
+extern crate serde;
+extern crate serde_json;
 #[macro_use]
-extern crate nickel;
-extern crate mysql;
-extern crate hyper;
-extern crate rustc_serialize;
-#[macro_use(bson, doc)]
-extern crate bson;
+extern crate serde_derive;
 
-/* Imports */
-mod server;
-use server::serv::*;
-use std::{env, str};
+use rocket::Request;
+use rocket::response::Redirect;
+use rocket::response::NamedFile;
+use rocket_contrib::Template;
 
-/* Main function */
+use std::io;
+use std::path::{Path, PathBuf};
+
+#[derive(Serialize)]
+struct TemplateContext {
+    title: String
+}
+
+#[get("/")]
+fn take_me_home() -> Redirect {
+    Redirect::to("/home")
+}
+
+#[get("/home")]
+fn home() -> Template {
+    let context = TemplateContext {title: "Abstract".to_string()};
+    Template::render("home", &context)
+}
+
+#[get("/<file..>")]
+fn files(file: PathBuf) -> Option<NamedFile> {
+    NamedFile::open(Path::new("templates/").join(file)).ok()
+}
+
+fn rocket() -> rocket::Rocket {
+    rocket::ignite().mount("/", routes![take_me_home, home, files])
+}
+
 fn main() {
-    let port = env::var("PORT").map(|s| s.parse().unwrap()).unwrap_or(3000);
-    let address = &format!("127.0.0.1:{}", port);
-
-    serv::start_server(address).unwrap();
+    rocket().launch();
 }

@@ -1,13 +1,16 @@
 [package]
-name = "abstract-rs"
+name = "tothemoon"
 version = "0.1.0"
-authors = ["Landon Mote <landon.mote@gmail.com>"]
+authors = ["landon.mote <landon.mote@gmail.com>"]
 
 [dependencies]
-hyper = "*"
-mysql = "*"
-rustc-serialize = "*"
-bson = "*"
+rocket = "0.2.2"
+rocket_codegen = "0.2.2"
+serde = "*"
+serde_json = "*"
+serde_derive = "*"
 
-[dependencies.nickel]
-version = "*"
+[dependencies.rocket_contrib]
+version = "0.2.2"
+default-features = false
+features = ["handlebars_templates"]
