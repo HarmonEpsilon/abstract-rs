@@ -1,6 +1,6 @@
 language: rust
 rust:
-    - 1.17.0-nightly
+    - nightly
 os:
     - windows
 script:
