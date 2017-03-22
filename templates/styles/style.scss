@@ -1,20 +1,20 @@
 div.nav-container {
-    border-bottom: 1px solid #ddd;
-    padding: 1.05em;
+    border-bottom: 1px solid grey;
+    padding: 1.08em;
     li {
-        border-left: 2px solid #ddd;
-        border-right: 2px solid #ddd;
+        border-left: 2px solid grey;
+        border-right: 2px solid grey;
     }
     a {
         font-size: 14px;
         font-weight: 400;
     }
     .pure-menu-link:hover {
-        color: #000;
+        color: black;
         background-color: inherit;
     }
     .pure-menu-children {
-        border: 1px solid #ddd;
+        border: 1px solid grey;
         border-radius: 0 0 2px 2px;
         margin-left: -1px;
 
@@ -27,4 +27,10 @@ div.container {
     max-width: 1160px;
     margin: 0 auto;
     text-align: left;
+}
+.menu-item-divided {
+    border-bottom: 1px solid grey;
+}
+#navdrop {
+    border: 1px solid grey;
 }
