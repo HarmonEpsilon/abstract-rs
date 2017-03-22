@@ -1,9 +1,9 @@
 div.nav-container {
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid lightgrey;
     padding: 1.08em;
     li {
-        border-left: 2px solid grey;
-        border-right: 2px solid grey;
+        border-left: 2px solid lightgrey;
+        border-right: 2px solid lightgrey;
     }
     a {
         font-size: 14px;
@@ -14,7 +14,7 @@ div.nav-container {
         background-color: inherit;
     }
     .pure-menu-children {
-        border: 1px solid grey;
+        border: 1px solid lightgrey;
         border-radius: 0 0 2px 2px;
         margin-left: -1px;
 
@@ -27,10 +27,11 @@ div.container {
     max-width: 1160px;
     margin: 0 auto;
     text-align: left;
+    padding: 0 1em;
 }
 .menu-item-divided {
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid lightgrey;
 }
 #navdrop {
-    border: 1px solid grey;
+    border: 1px solid lightgrey;
 }
