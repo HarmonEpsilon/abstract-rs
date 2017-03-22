@@ -8,39 +8,23 @@ extern crate serde_json;
 #[macro_use]
 extern crate serde_derive;
 
-use rocket::Request;
-use rocket::response::Redirect;
-use rocket::response::NamedFile;
-use rocket_contrib::Template;
+//Custom modules
+mod home;
+mod auth;
 
-use std::io;
-use std::path::{Path, PathBuf};
+use home::home_routes::*;
 
-#[derive(Serialize)]
-struct TemplateContext {
-    title: String
-}
-
-#[get("/")]
-fn take_me_home() -> Redirect {
-    Redirect::to("/home")
-}
-
-#[get("/home")]
-fn home() -> Template {
-    let context = TemplateContext {title: "Abstract".to_string()};
-    Template::render("home", &context)
-}
-
-#[get("/<file..>")]
-fn files(file: PathBuf) -> Option<NamedFile> {
-    NamedFile::open(Path::new("templates/").join(file)).ok()
-}
-
+//Gets all routes from modules
 fn rocket() -> rocket::Rocket {
-    rocket::ignite().mount("/", routes![take_me_home, home, files])
+    rocket::ignite().mount("/", routes![
+        take_me_home,
+        home,
+        about,
+        files
+    ])
 }
 
+//Launches server
 fn main() {
     rocket().launch();
 }

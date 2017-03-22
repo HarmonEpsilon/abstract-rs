@@ -1,6 +1,6 @@
 div.nav-container {
     border-bottom: 1px solid lightgrey;
-    padding: 1.08em;
+    padding: 1.07em;
     li {
         border-left: 2px solid lightgrey;
         border-right: 2px solid lightgrey;
@@ -24,14 +24,28 @@ div.nav-container {
     }
 }
 div.container {
-    max-width: 1160px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: left;
     padding: 0 1em;
+
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    h3 {
+        font-size: 1em;
+    }
 }
 .menu-item-divided {
     border-bottom: 1px solid lightgrey;
 }
 #navdrop {
     border: 1px solid lightgrey;
+}
+#register {
+    border-left: 1px solid lightgrey;
+    padding-right: 1em;
 }
