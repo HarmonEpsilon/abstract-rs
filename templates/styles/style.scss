@@ -1,7 +1,9 @@
 div.nav-container {
     border-bottom: 1px solid #ddd;
+    padding: 1.05em;
     li {
-        border-left: 1px solid #ddd;
+        border-left: 2px solid #ddd;
+        border-right: 2px solid #ddd;
     }
     a {
         font-size: 14px;
