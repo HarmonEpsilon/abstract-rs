@@ -11,8 +11,10 @@ extern crate serde_derive;
 //Custom modules
 mod home;
 mod auth;
+mod errors;
 
 use home::home_routes::*;
+use errors::error_codes::*;
 
 //Gets all routes from modules
 fn rocket() -> rocket::Rocket {
@@ -21,6 +23,8 @@ fn rocket() -> rocket::Rocket {
         home,
         about,
         files
+    ]).catch(errors![
+        not_found
     ])
 }
 
