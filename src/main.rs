@@ -30,5 +30,6 @@ fn rocket() -> rocket::Rocket {
 
 //Launches server
 fn main() {
+    println!("Starting server...");
     rocket().launch();
 }
