@@ -1,12 +1,21 @@
 #![feature(plugin)]
 #![plugin(rocket_codegen)]
 
+//Rocket crates
 extern crate rocket_contrib;
 extern crate rocket;
+
+//Serde crates
 extern crate serde;
 extern crate serde_json;
 #[macro_use]
 extern crate serde_derive;
+
+//Diesel crates
+#[macro_use]
+extern crate diesel;
+#[macro_use]
+extern crate diesel_codegen;
 
 //Custom modules
 mod home;
