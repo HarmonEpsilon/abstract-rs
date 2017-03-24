@@ -21,7 +21,7 @@ body{
    	text-align: center;
    	padding: 14px 16px;
    	text-decoration: none;
-  	font-family: 'Lato', sans-serif;
+  	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #nav li:hover {
@@ -41,8 +41,10 @@ body{
     padding: 0;
 	position: absolute;
 	z-index: 1;
-	background-color:grey;
-	border: 1px solid grey;
+	background-color: grey;
+	border-left: 1px solid grey;
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
 	/*border-radius: 0 0 2px 2px;*/
 }
 
@@ -51,7 +53,7 @@ body{
 }
 
 div.container {
-    max-width: 1160px;
+    max-width: 1300px;
     margin: 0 auto;
     text-align: left;
     padding: 0 1em;
