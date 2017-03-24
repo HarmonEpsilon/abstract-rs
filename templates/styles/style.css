@@ -9,7 +9,7 @@ body{
    	margin: 0;
    	padding:  0 auto;
    	overflow: hidden;
-   	background-color: white;
+   	background-color: grey;
   	border-bottom: 1px solid lightgrey;
    	font-size: 15px;
     font-weight: 400;
@@ -17,19 +17,19 @@ body{
 
 #nav li a {
     display: block;
-   	color: grey;
+   	color: lightgrey;
    	text-align: center;
-   	padding: 8px 9px;
+   	padding: 14px 16px;
    	text-decoration: none;
   	font-family: 'Lato', sans-serif;
 }
 
 #nav li:hover {
-	background-color: lightgrey;
+	background-color: lightslategrey;
 }
 
 .hori {
-	display: inline;
+	display:inline;
     float: left;
     margin-left:14px;
 }
@@ -41,8 +41,8 @@ body{
     padding: 0;
 	position: absolute;
 	z-index: 1;
-	background-color:white;
-	border: 1px solid lightgrey;
+	background-color:grey;
+	border: 1px solid grey;
 	/*border-radius: 0 0 2px 2px;*/
 }
 
