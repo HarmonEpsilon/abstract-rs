@@ -1,8 +1,10 @@
 language: rust
+
 rust:
     - nightly
 os:
     - windows
 script:
+    - rustup update
     - cargo build -v
     - cargo test
