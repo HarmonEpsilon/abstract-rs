@@ -1,19 +1,40 @@
 {{> header}}
         <div class="container">
-            <div class="two-column">
-                <h1>Welcome to {{title}}!</h1>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-                sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
-                magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
-                quis nostrud exerci tation ullamcorper suscipit lobortis 
-                nisl ut aliquip ex ea commodo consequat. Duis autem vel eum 
-                iriure dolor in hendrerit in vulputate velit esse molestie 
-                consequat, vel illum dolore eu feugiat nulla facilisis at 
-                vero eros et accumsan et iusto odio dignissim qui blandit 
-                praesent luptatum zzril delenit augue duis dolore te feugait 
-                nulla facilisi. Nam liber tempor cum soluta nobis eleifend 
-                option congue nihil imperdiet doming id quod mazim placerat 
-                facer possim assum.
+            <div class="row">
+                <div class="col-6">
+                    <form action="#" method="POST">
+                        <h3>Register</h3>
+                        <input type="text" name="username" placeholder="Username">
+                        <input type="password" name="password" placeholder="Password">
+                        <input type="password" name="verification" placeholder="Verify password">
+                        <input type="email" name="email" placeholder="Email address">
+                        <hr></hr>
+                        <input type="checkbox" name="term-agree">I agree to the Terms and Conditions</input>
+                        <button type="submit" name="submit">Sign up</button>
+                    </form>
+                </div>
+                <div class="col-6">
+                    <h3>Welcome to Abstract!</h3>
+                
+                    <p>
+                        Hello! You're well on your way to becoming a member of Abstract: a community of
+                        reviewers, prereaders, and authors pursuing that most elusive thing in the world:
+                    </p>
+                    <p>
+                        A great story.
+                    </p>
+                    <p>
+                        Once you're registered, be sure to check out the active groups and reviewers from
+                        the home page, as well as this week's featured stories from our biggest and best
+                        groups.
+                    </p>
+                    <p>
+                        And as always, keep your wits sharp, and your pen at the ready.
+                    </p>
+                    <p>
+                        &#151;The Abstract Team
+                    </p>
+                </div>
             </div>
         </div>
 {{> footer}}

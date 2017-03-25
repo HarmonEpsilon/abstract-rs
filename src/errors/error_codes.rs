@@ -7,5 +7,6 @@ use std::collections::HashMap;
 pub fn not_found(req: &Request) -> Template {
     let mut path = HashMap::new();
     path.insert("path", req.uri().as_str());
+    path.insert("title", "Abstract");
     Template::render("error/404", &path)
 }

@@ -1,27 +1,33 @@
-body{
-    background-color:#f7f7f7;
-    font-family: 'Open Sans', sans-serif;
-    margin:0;
+/* Stylesheet for Abstract.rs */
+/* Created by RB and HarmonEpsilon(Figments) of the FimFiction Discord chat */
+/* 2017 */
+* {
+	box-sizing: border-box;
 }
 
+body{
+    background-color:#f7f7f7;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:0;
+}
+/* Navigation elements */
 #nav {
 	list-style-type: none;
    	margin: 0;
    	padding:  0 auto;
    	overflow: hidden;
    	background-color: grey;
-  	border-bottom: 1px solid lightgrey;
+  	border-bottom: 1px solid darkgrey;
    	font-size: 15px;
     font-weight: 400;
 }
 
 #nav li a {
     display: block;
-   	color: lightgrey;
+   	color: white;
    	text-align: center;
    	padding: 14px 16px;
    	text-decoration: none;
-  	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #nav li:hover {
@@ -29,9 +35,9 @@ body{
 }
 
 .hori {
-	display:inline;
-    float: left;
-    margin-left:14px;
+	display: inline;
+	float: left;
+    margin-left: 14px;
 }
 
 .dropdown-c {
@@ -42,9 +48,9 @@ body{
 	position: absolute;
 	z-index: 1;
 	background-color: grey;
-	border-left: 1px solid lightgrey;
-	border-right: 1px solid lightgrey;
-	border-bottom: 1px solid lightgrey;
+	border-left: 1px solid darkgrey;
+	border-right: 1px solid darkgrey;
+	border-bottom: 1px solid darkgrey;
 	/*border-radius: 0 0 2px 2px;*/
 }
 
@@ -52,28 +58,69 @@ body{
 	display: inline-block;
 }
 
+/* Body elements */
 div.container {
     max-width: 1300px;
     margin: 0 auto;
     text-align: left;
     padding: 1em 1em;
+	border-left: 1px lightgrey;
+	border-right: 1px lightgrey;
 }
 
-div.container .two-column {
-	-webkit-column-count: 2;
-	-moz-column-count: 2;
-	column-count: 2;
-
-	-webkit-column-gap: 40px;
-	-moz-column-gap: 40px;
-	column-gap: 40px;
-
-	-webkit-column-rule: 2px solid lightgrey;
-	-moz-column-rule: 2px solid lightgrey;
-	column-rule: 2px solid lightgrey;
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
 }
 
-.two-column h1 {
-	-webkit-column-span: all;
-	column-span: all;
+[class*="col-"] {
+	float: left;
+	padding: 15px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/* Form Inputs */
+input[type=text] {
+	width: 75%;
+	padding: 12px 20px;
+	margin: 8px 0;
+}
+
+input[type=password] {
+	width: 75%;
+	padding: 12px 20px;
+	margin: 8px 0;
+}
+
+input[type=email] {
+	width: 75%;
+	padding: 12px 20px;
+	margin: 8px 0;
+}
+
+button[type=submit] {
+	background-color: slategray;
+	border: black;
+	color: white;
+	padding: 16px 12px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+button[type=submit]:hover {
+	background-color: lightslategray;
 }
