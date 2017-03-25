@@ -18,11 +18,11 @@ extern crate diesel;
 extern crate diesel_codegen;
 
 //Custom modules
-mod home;
+mod site_routes;
 mod auth;
 mod errors;
 
-use home::home_routes::*;
+use site_routes::routes::*;
 use errors::error_codes::*;
 
 //Gets all routes from modules
@@ -31,6 +31,7 @@ fn rocket() -> rocket::Rocket {
         take_me_home,
         home,
         about,
+        sign_up,
         files
     ]).catch(errors![
         not_found
