@@ -1,5 +1,6 @@
 #![feature(plugin)]
 #![plugin(rocket_codegen)]
+#![feature(custom_derive)]
 
 //Rocket crates
 extern crate rocket_contrib;
@@ -21,10 +22,12 @@ extern crate dotenv;
 //Custom modules
 mod site_routes;
 mod errors;
-mod data;
+mod database;
+mod auth;
 
 use site_routes::routes::*;
 use errors::error_codes::*;
+use auth::*;
 
 //Gets all routes from modules
 fn rocket() -> rocket::Rocket {
@@ -33,6 +36,7 @@ fn rocket() -> rocket::Rocket {
         home,
         about,
         sign_up,
+        register_user,
         files
     ]).catch(errors![
         not_found

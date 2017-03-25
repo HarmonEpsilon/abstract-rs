@@ -24,7 +24,7 @@ pub fn establish_connection() -> MysqlConnection {
 
 //Create a new user and insert it into the Users table
 pub fn create_user(conn: &MysqlConnection, user: &str, pass: &str, email: &str) -> User {
-    use data::schema::users::dsl::{users, id};
+    use database::schema::users::dsl::{users, id};
 
     let new_user = NewUser {
         user: user,

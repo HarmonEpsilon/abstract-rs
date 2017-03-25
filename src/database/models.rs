@@ -1,4 +1,4 @@
-use data::schema::users;
+use database::schema::users;
 
 #[derive(Queryable)]
 pub struct User {
@@ -8,6 +8,7 @@ pub struct User {
     pub email: String,
 }
 
+#[derive(FromForm)]
 #[derive(Insertable)]
 #[table_name="users"]
 pub struct NewUser<'a> {
