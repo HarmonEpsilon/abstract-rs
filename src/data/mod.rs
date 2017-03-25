@@ -1,14 +1,17 @@
 pub mod schema;
 pub mod models;
 
+//Diesel imports
 use diesel;
 use diesel::prelude::*;
 use diesel::mysql::MysqlConnection;
 use dotenv::dotenv;
 use std::env;
 
+//Custom imports
 use self::models::{User, NewUser};
 
+//Establish connection to database
 pub fn establish_connection() -> MysqlConnection {
     dotenv().ok();
 
@@ -19,6 +22,7 @@ pub fn establish_connection() -> MysqlConnection {
         .expect(&format!("Error connecting to {}", database_url))
 }
 
+//Create a new user and insert it into the Users table
 pub fn create_user(conn: &MysqlConnection, user: &str, pass: &str, email: &str) -> User {
     use data::schema::users::dsl::{users, id};
 
