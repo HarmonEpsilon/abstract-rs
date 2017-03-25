@@ -16,11 +16,12 @@ extern crate serde_derive;
 extern crate diesel;
 #[macro_use]
 extern crate diesel_codegen;
+extern crate dotenv;
 
 //Custom modules
 mod site_routes;
-mod auth;
 mod errors;
+mod data;
 
 use site_routes::routes::*;
 use errors::error_codes::*;
