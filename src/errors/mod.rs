@@ -8,7 +8,7 @@ use std::collections::HashMap;
 pub fn not_found(req: &Request) -> Template {
     let mut path = HashMap::new();
     path.insert("path", req.uri().as_str());
-    path.insert("title", "Abstract");
+    path.insert("title", "[A] ABSTRACT");
     Template::render("error/404", &path)
 }
 
@@ -16,6 +16,6 @@ pub fn not_found(req: &Request) -> Template {
 #[error(422)]
 pub fn unprocessable_entity(req: &Request) -> Template {
     let mut path = HashMap::new();
-    path.insert("title", "Abstract");
+    path.insert("title", "[A] ABSTRACT");
     Template::render("error/422", &path)
 }
