@@ -14,5 +14,5 @@ pub struct User {
 pub struct NewUser<'a> {
     pub user: &'a str,
     pub pass: &'a str,
-    pub email: &'a str
+    pub email: &'a str,
 }

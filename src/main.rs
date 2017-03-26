@@ -20,13 +20,13 @@ extern crate diesel_codegen;
 extern crate dotenv;
 
 //Custom modules
-mod site_routes;
+mod routes;
 mod errors;
 mod database;
 mod auth;
 
-use site_routes::routes::*;
-use errors::error_codes::*;
+use routes::*;
+use errors::*;
 use auth::*;
 
 //Gets all routes from modules
@@ -39,7 +39,8 @@ fn rocket() -> rocket::Rocket {
         register_user,
         files
     ]).catch(errors![
-        not_found
+        not_found,
+        unprocessable_entity
     ])
 }
 

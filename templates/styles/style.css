@@ -16,15 +16,16 @@ body{
    	margin: 0;
    	padding:  0 auto;
    	overflow: hidden;
-   	background-color: grey;
+   	background-color: white;
   	border-bottom: 1px solid darkgrey;
    	font-size: 15px;
     font-weight: 400;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
 
 #nav li a {
     display: block;
-   	color: white;
+   	color: black;
    	text-align: center;
    	padding: 14px 16px;
    	text-decoration: none;
@@ -32,6 +33,10 @@ body{
 
 #nav li:hover {
 	background-color: lightslategrey;
+}
+
+#nav li a:hover {
+	color: whitesmoke;
 }
 
 .hori {
@@ -47,11 +52,21 @@ body{
     padding: 0;
 	position: absolute;
 	z-index: 1;
-	background-color: grey;
-	border-left: 1px solid darkgrey;
-	border-right: 1px solid darkgrey;
-	border-bottom: 1px solid darkgrey;
+	background-color: white;
+	border: 1px solid darkgrey;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 	/*border-radius: 0 0 2px 2px;*/
+}
+
+.dropdown-c .divider {
+	height: 1px;
+	margin: 9px 0;
+	overflow: hidden;
+	background-color: darkgrey;
+}
+
+.dropdown-c .divider:hover {
+	background-color: none;
 }
 
 .dropdown:hover .dropdown-c {
@@ -94,19 +109,19 @@ div.container {
 
 /* Form Inputs */
 input[type=text] {
-	width: 75%;
+	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
 }
 
 input[type=password] {
-	width: 75%;
+	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
 }
 
 input[type=email] {
-	width: 75%;
+	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
 }
