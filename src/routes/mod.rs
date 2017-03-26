@@ -37,6 +37,13 @@ pub fn sign_up() -> Template {
     Template::render("user/register", &context)
 }
 
+//Get request for Sign In page, output Sign In Template
+#[get("/signin")]
+pub fn sign_in() -> Template {
+    let mut context = HashMap::new();
+    context.insert("title", "[A] ABSTRACT");
+    Template::render("user/signin", &context)
+}
 //Hook up files such as CSS and JavaScript
 #[get("/<file..>")]
 pub fn files(file: PathBuf) -> Option<NamedFile> {

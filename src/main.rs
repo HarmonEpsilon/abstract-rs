@@ -36,6 +36,7 @@ fn rocket() -> rocket::Rocket {
         home,
         about,
         sign_up,
+        sign_in,
         register_user,
         files
     ]).catch(errors![
