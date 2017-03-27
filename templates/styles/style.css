@@ -313,7 +313,7 @@ button[type=submit]:hover {
 	text-align: left;
 }
 
-.omnibus-container p {
+.omnibus-container div.omnibus-body {
 	text-indent: 50px;
 	text-align: justify;
 	text-justify: inter-word;

@@ -60,7 +60,8 @@ pub fn omnibus() -> Template {
         title: "[A] ABSTRACT".to_string(),
         nav_toc: true,
         contents: vec![
-                "Preamble"
+                "Preamble",
+                "I-Foreward"
             ].iter().map(|s| s.to_string()).collect()
         };
     Template::render("docs/omnibus", &context)
