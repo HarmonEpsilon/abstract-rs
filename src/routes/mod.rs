@@ -7,13 +7,6 @@ use std::io;
 use std::path::{Path, PathBuf};
 use std::collections::HashMap;
 
-/*
-//For use with FontAwesome
-#[derive(FromForm)]
-pub struct FontAwesome<'a>{
-    pub v: &'a str
-}*/
-
 //Redirect to Home 
 #[get("/")]
 pub fn take_me_home() -> Redirect {
@@ -51,18 +44,17 @@ pub fn sign_in() -> Template {
     context.insert("title", "[A] ABSTRACT");
     Template::render("user/signin", &context)
 }
+
+//Get request for Omnibus, outpu Omnibus Template
+#[get("/omnibus")]
+pub fn omnibus() -> Template {
+    let mut context = HashMap::new();
+    context.insert("title", "[A] ABSTRACT");
+    Template::render("docs/omnibus", &context)
+}
+
 //Hook up files such as CSS and JavaScript
 #[get("/<file..>")]
 pub fn files(file: PathBuf) -> Option<NamedFile> {
     NamedFile::open(Path::new("templates/styles/").join(file)).ok()
 }
-
-/*//Get fontawesome fonts to work properly
-#[get("/vendor/font-awesome/fonts/fontawesome-webfont.ttf?<version>")]
-pub fn font_awesome_ttf(version: FontAwesome) -> String {
-    format!("Version {} found!", version.v)
-}
-#[get("/vendor/font-awesome/fonts/fontawesome-webfont.woff?<version>")]
-pub fn font_awesome_woff(version: FontAwesome) -> String {
-    format!("Version {} found!", version.v)
-}*/

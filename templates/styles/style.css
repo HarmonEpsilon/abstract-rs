@@ -11,6 +11,11 @@ body{
     margin:0;
 }
 /* Navigation elements */
+#navbar {
+	position: fixed;
+	width: 100%;
+}
+
 #nav {
 	list-style-type: none;
    	margin: 0;
@@ -51,7 +56,7 @@ body{
 
 #nav .dropdown-c a {
 	text-align: left;
-	padding: 10px 60px 10px 10px;
+	padding: 10px 63px 10px 10px;
 }
 
 .hori {
@@ -62,6 +67,7 @@ body{
 
 .dropdown-c {
 	display: none;
+	transition: display 2s;
 	list-style-type: none;
 	text-align: left;
 	margin: 0;
@@ -94,7 +100,7 @@ div.container {
     max-width: 1300px;
     margin: 0 auto;
     text-align: left;
-    padding: 1em 1em;
+    padding: 1em 1em 1em 1em;
 	border-left: 1px lightgrey;
 	border-right: 1px lightgrey;
 }
@@ -124,7 +130,7 @@ div.container {
 .col-12 {width: 100%;}
 
 div.page-header {
-	text-align: left;
+	text-align: center;
 	color: whitesmoke;
 	background-color: lightslategrey;
 	border-bottom: 1px solid lightgrey;
@@ -135,6 +141,7 @@ div.page-header {
 }
 
 div.page-header div.header-container {
+	padding: 3em 1em 1em 1em;
 	max-width: 1300px;
 	margin: 0 auto;
 	text-align: left;
@@ -144,6 +151,13 @@ div.page-header div.description {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+div.body-container {
+	padding: 3em 1em 1em 1em;
+	max-width: 1300px;
+	margin: 0 auto;
+	text-align: left;
 }
 /* Form Inputs */
 input[type=text] {
@@ -218,4 +232,29 @@ button[type=submit]:hover {
 	color: white;
 	background-color: lightslategray;
 	border-color: lightgrey;
+}
+
+/* Omnibus Styling */
+.omnibus-opening-header {
+	padding-bottom: 9px;
+	margin: 40px 0 20px;
+	border-bottom: 1px solid lightgrey;
+	text-align: center;
+}
+
+.omnibus-opening-header h1 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: black;
+}
+
+.omnibus-opening-header h2 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: grey;
+}
+
+.omnibus-container {
+	padding: 1em;
+	max-width: 1000px;
+	margin: 0 auto;
+	text-align: left;
 }
