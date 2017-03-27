@@ -1,6 +1,5 @@
         <div id="navbar">
             <ul id="nav">
-                <!--<li class="hori"><a href="/home">{{title}}</a><li>-->
                 <li class="hori dropdown"><a href="/home">{{title}} <i class="fa fa-angle-down fa-fw" aria-hidden="true"></i></a>
                     <ul class="dropdown-c">
                         <li><a href="/signin"><i class="fa fa-sign-in fa-fw" aria-hidden="true"></i> Sign in</a></li>
@@ -12,5 +11,12 @@
                         <li><a href="#faqs"><i class="fa fa-question-circle fa-fw" aria-hidden="true"></i> FAQs</a></li>
                     </ul>
                 </li>
+                {{#if nav_toc}}
+                    <li class="hori-right dropdown"><a href="#"><i class="fa fa-list fa-fw" aria-hidden="true"></i> Table of Contents</a>
+                        <ul class="dropdown-c">
+                            <li><a class="right" href="#preamble">Preamble</a></li>
+                        </ul>
+                    </li>
+                {{/if}}
             </ul>
         </div>

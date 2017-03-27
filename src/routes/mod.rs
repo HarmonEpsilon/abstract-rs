@@ -7,6 +7,13 @@ use std::io;
 use std::path::{Path, PathBuf};
 use std::collections::HashMap;
 
+//For use with Omnibus rendering
+#[derive(Serialize)]
+pub struct TableOfContentsNav {
+    pub title: String,
+    pub nav_toc: bool
+}
+
 //Redirect to Home 
 #[get("/")]
 pub fn take_me_home() -> Redirect {
@@ -48,8 +55,10 @@ pub fn sign_in() -> Template {
 //Get request for Omnibus, outpu Omnibus Template
 #[get("/omnibus")]
 pub fn omnibus() -> Template {
-    let mut context = HashMap::new();
-    context.insert("title", "[A] ABSTRACT");
+    let mut context = TableOfContentsNav {
+        title: "[A] ABSTRACT".to_string(),
+        nav_toc: true,
+        };
     Template::render("docs/omnibus", &context)
 }
 
