@@ -47,9 +47,11 @@ body{
 #nav li:hover a {
 	color: whitesmoke;
 }
+
 #nav li:hover .dropdown-c a{
   color:black;
-} 
+}
+ 
 #nav .dropdown-c li:hover a {
   color:white;
 }
