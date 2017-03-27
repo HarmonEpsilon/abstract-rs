@@ -1,17 +1,22 @@
 {{> header}}
-<div class="container">
-    <h1>About Abstract</h1>
+        <div class="page-header">
+            <div class="header-container">
+                <h1>About {{title}}</h1>
+                <div class="description"></div>
+            </div>
+        </div>
 
-    <p>
-        Abstract is a website dedicated to groups who preread and review fiction.
-    </p>
-    <p>
-        It was created using <a href="https://rocket.rs/">Rocket.rs</a>, a framework built
-        using the Rust programming language. 
-    </p>
-    <p>
-        The code for this site is hosted on <a href="https://github.com/HarmonEpsilon/abstract-rs">GitHub</a>.
-        If you would like to contribute, send the administrator of this site a message.
-    </p>
-</div>
+    <div class="container">
+        <p>
+            {{title}} is a website dedicated to groups who preread and review fiction.
+        </p>
+        <p>
+            It was created using <a href="https://rocket.rs/">Rocket.rs</a>, a framework built
+            using the Rust programming language. 
+        </p>
+        <p>
+            The code for this site is hosted on <a href="https://github.com/HarmonEpsilon/abstract-rs">GitHub</a>.
+            If you would like to contribute, send the administrator of this site a message.
+        </p>
+    </div>
 {{> footer}}

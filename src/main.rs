@@ -38,6 +38,8 @@ fn rocket() -> rocket::Rocket {
         sign_up,
         sign_in,
         register_user,
+        /*font_awesome_ttf,
+        font_awesome_woff,*/
         files
     ]).catch(errors![
         not_found,
