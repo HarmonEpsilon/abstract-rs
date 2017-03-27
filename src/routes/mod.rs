@@ -11,7 +11,8 @@ use std::collections::HashMap;
 #[derive(Serialize)]
 pub struct TableOfContentsNav {
     pub title: String,
-    pub nav_toc: bool
+    pub nav_toc: bool,
+    pub contents: Vec<String>
 }
 
 //Redirect to Home 
@@ -58,6 +59,9 @@ pub fn omnibus() -> Template {
     let mut context = TableOfContentsNav {
         title: "[A] ABSTRACT".to_string(),
         nav_toc: true,
+        contents: vec![
+                "Preamble"
+            ].iter().map(|s| s.to_string()).collect()
         };
     Template::render("docs/omnibus", &context)
 }
