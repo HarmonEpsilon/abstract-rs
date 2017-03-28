@@ -1,3 +1,5 @@
+pub mod nav;
+
 use rocket::Response;
 use rocket::response::Redirect;
 use rocket::response::NamedFile;
@@ -7,13 +9,7 @@ use std::io;
 use std::path::{Path, PathBuf};
 use std::collections::HashMap;
 
-//For use with Omnibus rendering
-#[derive(Serialize)]
-pub struct TableOfContentsNav {
-    pub title: String,
-    pub nav_toc: bool,
-    pub contents: Vec<String>
-}
+use nav::*;
 
 //Redirect to Home 
 #[get("/")]
@@ -32,8 +28,11 @@ pub fn home() -> Template {
 //Get request for About page, output About template
 #[get("/about")]
 pub fn about() -> Template {
-    let mut context = HashMap::new();
-    context.insert("title", "[A] ABSTRACT");
+    let mut context = AboutFAQNav {
+        title: "[A] ABSTRACT".to_string(),
+        nav_about: true
+    };
+
     Template::render("docs/about", &context)
 }
 
