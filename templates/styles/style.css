@@ -38,7 +38,7 @@ body{
 }
 
 #nav li:hover {
-	background-color: lightslategrey;
+	background-color: steelblue;
 }
 
 #nav li a:hover {
@@ -159,7 +159,7 @@ hr {
 div.page-header {
 	text-align: center;
 	color: whitesmoke;
-	background-color: lightslategrey;
+	background-color: steelblue;
 	border-bottom: 1px solid lightgrey;
 	padding: 1px;
 	z-index: -1;
@@ -239,17 +239,19 @@ input[type=email] {
 }
 
 button[type=submit] {
-	background-color: slategray;
+	background-color: steelblue;
 	border: black;
 	color: white;
 	padding: 16px 12px;
 	text-decoration: none;
+	border-radius: 2px 2px 2px 2px;
 	margin: 4px 2px;
 	cursor: pointer;
 }
 
 button[type=submit]:hover {
-	background-color: lightslategray;
+	color: whitesmoke;
+	background-color: lightsteelblue;
 }
 
 /* Content boxes */
@@ -293,7 +295,7 @@ button[type=submit]:hover {
 
 .content-box-default > .content-box-heading {
 	color: white;
-	background-color: slategrey;
+	background-color: lightslategray;
 	border-color: lightgrey;
 }
 
