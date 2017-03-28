@@ -107,6 +107,10 @@ body{
 	display: inline-block;
 }
 
+@media screen and (min-width: 480px) {
+	padding: 1em;
+}
+
 /* Body elements */
 div.container {
     max-width: 1300px;

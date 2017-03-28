@@ -33,7 +33,6 @@ mod auth;
 use routes::*;
 use errors::*;
 use auth::*;
-use database::connection::*;
 
 //Gets all routes from modules
 fn rocket() -> rocket::Rocket {
@@ -54,6 +53,5 @@ fn rocket() -> rocket::Rocket {
 
 //Launches server
 fn main() {
-    database_connection();
     rocket().launch();
 }
