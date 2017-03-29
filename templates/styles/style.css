@@ -368,16 +368,16 @@ button[type=submit]:hover {
 }
 
 /* Omnibus Styling */
-.omnibus-opening-header {
-	padding-bottom: 9px;
+.omnibus-opening-header {	
+	padding: 2em 1em 1em 1em;
 	margin: 40px 0 20px;
-	border-bottom: 1px solid lightgrey;
 	text-align: center;
+	color: white;
+	background-color: steelblue;
 }
 
 .omnibus-opening-header h1 {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: black;
 }
 
 .omnibus-opening-header h2 {
