@@ -1,5 +1,5 @@
 [package]
-name = "tothemoon"
+name = "abstract-rs"
 version = "0.1.0"
 authors = ["landon.mote <landon.mote@gmail.com>"]
 
