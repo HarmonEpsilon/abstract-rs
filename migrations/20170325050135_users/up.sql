@@ -4,4 +4,4 @@ CREATE TABLE users (
     user VARCHAR(100) NOT NULL,
     pass VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL
-);
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci;
