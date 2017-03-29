@@ -8,7 +8,6 @@ pub struct User {
     pub email: String,
 }
 
-#[derive(FromForm)]
 #[derive(Insertable)]
 #[table_name="users"]
 pub struct NewUser<'a> {
