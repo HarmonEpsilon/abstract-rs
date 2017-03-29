@@ -5,28 +5,50 @@
 	box-sizing: border-box;
 }
 
+html {
+	position: relative;
+	min-height: 100%;
+}
+
 body{
     background-color:white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin:0;
+    margin: 0 0 100px;
 }
+
+footer {
+	display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 75px;
+    width: 100%;
+    overflow:hidden;
+	font-size: 12px;
+}
+
+div.foot {
+	border-top: 1px solid lightgrey;
+}
+
 /* Navigation elements */
 #navbar {
 	position: fixed;
 	width: 100%;
+	background-color: white;
 	border-top: 1px solid darkgrey;
 	border-bottom: 1px solid darkgrey;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
 
 #nav {
 	list-style-type: none;
-   	margin: 0;
-   	padding:  0 auto;
+   	margin: auto;
+	max-width: 1300px;
+	padding-left: 0px;
    	overflow: hidden;
-   	background-color: white;
    	font-size: 15px;
     font-weight: 400;
-	box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
 
 #nav li a {
@@ -69,7 +91,6 @@ body{
 .hori {
 	display: inline;
 	float: left;
-    margin-left: 14px;
 }
 
 .hori-right {
@@ -141,6 +162,22 @@ hr.invisible {
 	-webkit-box-sizing: content-box;
 	   -moz-box-sizing: content-box;
 	   	    box-sizing: content-box;
+}
+
+a.button {
+	background-color: royalblue;
+	border: black;
+	color: white;
+	padding: 10px 10px;
+	text-decoration: none;
+	border-radius: 2px 2px 2px 2px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+a.button:hover {
+	color: whitesmoke;
+	background-color: darkblue;
 }
 
 .row::after {
@@ -249,11 +286,6 @@ div.body-container {
 
 .pull-right {
 	float: right !important;
-}
-
-/* Footer style */
-div.footer {
-	display: block;
 }
 
 /* Form Inputs */
