@@ -1,4 +1,3 @@
-use std::thread;
 use std::env;
 
 use diesel::prelude::*;
