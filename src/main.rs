@@ -19,10 +19,6 @@ extern crate diesel;
 extern crate diesel_codegen;
 extern crate dotenv;
 
-//R2D2 crates
-extern crate r2d2;
-extern crate r2d2_diesel;
-
 //Custom modules
 mod routes;
 mod errors;
