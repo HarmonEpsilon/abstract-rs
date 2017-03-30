@@ -1,8 +1,16 @@
+//For use with main pages (home, etc...)
+#[derive(Serialize)]
+pub struct LoggedInNav {
+    pub title: String,
+    pub logged_in: bool
+}
+
 //For use with Omnibus rendering
 #[derive(Serialize)]
 pub struct TableOfContentsNav {
     pub title: String,
     pub nav_toc: bool,
+    pub logged_in: bool,
     pub contents: Vec<String>
 }
 
@@ -11,4 +19,5 @@ pub struct TableOfContentsNav {
 pub struct AboutFAQNav {
     pub title: String,
     pub nav_about: bool,
+    pub logged_in: bool,
 }

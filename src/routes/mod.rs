@@ -10,6 +10,7 @@ use std::path::{Path, PathBuf};
 use std::collections::HashMap;
 
 use nav::*;
+use auth::*;
 
 //Redirect to Home 
 #[get("/")]
@@ -20,8 +21,11 @@ pub fn take_me_home() -> Redirect {
 //Get request for Home, output Home template
 #[get("/home")]
 pub fn home() -> Template {
-    let mut context = HashMap::new();
-    context.insert("title", "[A] ABSTRACT");
+    let context = LoggedInNav {
+        title: "[A] ABSTRACT".to_string(),
+        logged_in: is_logged_in(1),
+    };
+
     Template::render("main/home", &context)
 }
 
@@ -30,7 +34,8 @@ pub fn home() -> Template {
 pub fn about() -> Template {
     let mut context = AboutFAQNav {
         title: "[A] ABSTRACT".to_string(),
-        nav_about: true
+        nav_about: true,
+        logged_in: is_logged_in(1),
     };
 
     Template::render("docs/about", &context)
@@ -58,6 +63,7 @@ pub fn omnibus() -> Template {
     let mut context = TableOfContentsNav {
         title: "[A] ABSTRACT".to_string(),
         nav_toc: true,
+        logged_in: is_logged_in(1),
         contents: vec![
                 "Preamble",
                 "I-Foreward"
