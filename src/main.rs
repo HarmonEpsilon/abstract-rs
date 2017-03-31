@@ -48,6 +48,5 @@ fn rocket() -> rocket::Rocket {
 
 //Launches server
 fn main() {
-    println!("Testing git");
     rocket().launch();
 }
