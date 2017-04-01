@@ -18,10 +18,14 @@ pub struct Register {
 #[post("/register", data="<new_user>")]
 pub fn register_user(new_user: Form<Register>) -> Redirect {
     let connection = connection::establish_connection();
-    let user = new_user.get();
 
     //TODO: get successful user creation then test Session once that's working
-    let new_hombre = create_user(&connection, &user.user, &user.pass, &user.email);
+    let user = create_user(
+        &connection, 
+        &new_user.get().user, 
+        &new_user.get().pass, 
+        &new_user.get().email,
+    );
     
     Redirect::to("/home")
 }
