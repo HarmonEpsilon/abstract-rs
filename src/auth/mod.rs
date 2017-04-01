@@ -2,8 +2,7 @@ use std::string::String;
 
 use rocket::request::Form;
 use rocket::response::Redirect;
-//TODO: figure out what the hell is happening with Session
-use rocket::http::Cookies;
+//TODO: Implement session support once it lands in Rocket 0.3.0
 
 use database::*;
 
