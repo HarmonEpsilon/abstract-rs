@@ -14,7 +14,7 @@ pub fn not_found(req: &Request) -> Template {
 
 //422 Unprocessable Entity
 #[error(422)]
-pub fn unprocessable_entity(req: &Request) -> Template {
+pub fn unprocessable_entity() -> Template {
     let mut path = HashMap::new();
     path.insert("title", "[A] ABSTRACT");
     Template::render("error/422", &path)

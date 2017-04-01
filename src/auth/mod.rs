@@ -1,11 +1,9 @@
-use std::io::{stdin, Read};
 use std::string::String;
 
-use rocket::request::{self, Form, FlashMessage, FromRequest, Request};
-use rocket::response::{Redirect, Flash};
+use rocket::request::Form;
+use rocket::response::Redirect;
 //TODO: figure out what the hell is happening with Session
 use rocket::http::Cookies;
-use rocket::Outcome;
 
 use database::*;
 

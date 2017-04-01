@@ -1,11 +1,9 @@
 pub mod nav;
 
-use rocket::Response;
 use rocket::response::Redirect;
 use rocket::response::NamedFile;
 use rocket_contrib::Template;
 
-use std::io;
 use std::path::{Path, PathBuf};
 use std::collections::HashMap;
 
@@ -32,7 +30,7 @@ pub fn home() -> Template {
 //Get request for About page, output About template
 #[get("/about")]
 pub fn about() -> Template {
-    let mut context = AboutFAQNav {
+    let context = AboutFAQNav {
         title: "[A] ABSTRACT".to_string(),
         nav_about: true,
         logged_in: is_logged_in(1),
@@ -60,7 +58,7 @@ pub fn sign_in() -> Template {
 //Get request for Omnibus, outpu Omnibus Template
 #[get("/omnibus")]
 pub fn omnibus() -> Template {
-    let mut context = TableOfContentsNav {
+    let context = TableOfContentsNav {
         title: "[A] ABSTRACT".to_string(),
         nav_toc: true,
         logged_in: is_logged_in(1),

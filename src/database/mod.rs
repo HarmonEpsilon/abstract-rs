@@ -6,8 +6,6 @@ pub mod connection;
 use diesel;
 use diesel::prelude::*;
 use diesel::mysql::MysqlConnection;
-use dotenv::dotenv;
-use std::env;
 
 //Custom imports
 use self::models::{User, NewUser};
