@@ -21,3 +21,11 @@ pub struct AboutFAQNav {
     pub nav_about: bool,
     pub logged_in: bool,
 }
+
+//For use with Group navigation
+#[derive(Serialize)]
+pub struct GroupNav {
+    pub title: String,
+    pub nav_group: bool,
+    pub logged_in: bool,
+}

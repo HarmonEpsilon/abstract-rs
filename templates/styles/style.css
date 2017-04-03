@@ -164,7 +164,7 @@ hr.invisible {
 }
 
 a.button {
-	background-color: royalblue;
+	background-color: steelblue;
 	border: black;
 	color: white;
 	padding: 10px 10px;
@@ -400,28 +400,71 @@ button[type=submit]:hover {
 
 /*Group pages*/
 .group-header {
-	text-align: left;
-	color: whitesmoke;
-	background-color: #5A5856;
-	padding: 1px;
+	background-color: #5d478d;
+	height: 200px;
 	z-index: -1;
 	position: relative;
 	/* margin-bottom: 20px; */
 }
 
-.group-header img.group-image {
-	position: absolute;
-	padding-top: 5em;
-	width: 128px;
-	height: 128px;
+img.group-image {
+	width: 182px;
+	height: 182px;
 	box-sizing: content-box;
+	border: 1px solid lightgrey;
+}
+
+.group-header .heading {
+	padding-left: 3em;
+}
+
+.group-header .heading h1 {
+	padding-bottom: 0;
+}
+
+.group-header .heading h2 {
+	font-weight: normal;
+	padding-top: 0;
+	font-size: 18px;
+	border-bottom: 1px solid white;
 }
 
 .group-container {
+	color: whitesmoke;
     max-width: 1100px;
     margin: 0 auto;
     text-align: left;
-    padding: 1em 1em 1em 1em;
-	border-left: 1px lightgrey;
-	border-right: 1px lightgrey;
+    padding: 4em 1em 1em 1em;
+}
+
+.group-container a.group-button {
+	background-color: mediumpurple;
+	border: 1px solid black;
+	color: white;
+	padding: 10px 10px;
+	text-decoration: none;
+	border-radius: 2px 2px 2px 2px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.group-container a.group-button:hover {
+	background-color: rebeccapurple;
+}
+
+.group-nav-divider {
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+.group-content-heading {
+	border-radius: 4px 4px 0px 0px;
+	text-align: left;
+	padding: 2px 10px;
+	border-bottom: 1px solid transparent;
+}
+
+.content-box-default > .group-content-heading {
+	color: white;
+	background-color: mediumpurple;
+	border-color: lightgrey;
 }

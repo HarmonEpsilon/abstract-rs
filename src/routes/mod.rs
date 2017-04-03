@@ -73,8 +73,9 @@ pub fn omnibus() -> Template {
 //Get request for Group home page, output Group Page Template
 #[get("/group")]
 pub fn group() -> Template {
-    let context = LoggedInNav {
+    let context = GroupNav {
         title: "[A] ABSTRACT".to_string(),
+        nav_group: true,
         logged_in: is_logged_in(1),
     };
 
