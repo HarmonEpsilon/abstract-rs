@@ -400,28 +400,28 @@ button[type=submit]:hover {
 
 /*Group pages*/
 .group-header {
-	padding: 2em 1em 1em 1em;
-	margin: 40px 0 20px;
 	text-align: left;
-	color: white;
+	color: whitesmoke;
+	background-color: #5A5856;
+	padding: 1px;
+	z-index: -1;
+	position: relative;
+	/* margin-bottom: 20px; */
 }
 
 .group-header img.group-image {
 	position: absolute;
+	padding-top: 5em;
 	width: 128px;
 	height: 128px;
 	box-sizing: content-box;
-	background-color: white;
-	padding: 3px;
-	border: 1px solid rgba(0, 0, 0, 0.3);
-	margin-right: 0px;
-	left: 15px;
 }
 
-.group-header h1.group-name {
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.group-header h2.group-description {
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+.group-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 1em 1em 1em 1em;
+	border-left: 1px lightgrey;
+	border-right: 1px lightgrey;
 }
