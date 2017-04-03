@@ -39,6 +39,7 @@ fn rocket() -> rocket::Rocket {
         sign_in,
         register_user,
         omnibus,
+        group,
         files
     ]).catch(errors![
         not_found,

@@ -70,6 +70,16 @@ pub fn omnibus() -> Template {
     Template::render("docs/omnibus", &context)
 }
 
+//Get request for Group home page, output Group Page Template
+#[get("/group")]
+pub fn group() -> Template {
+    let context = LoggedInNav {
+        title: "[A] ABSTRACT".to_string(),
+        logged_in: is_logged_in(1),
+    };
+
+    Template::render("group/group", &context)
+}
 //Hook up files such as CSS and JavaScript
 #[get("/<file..>")]
 pub fn files(file: PathBuf) -> Option<NamedFile> {

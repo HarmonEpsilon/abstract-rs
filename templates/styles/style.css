@@ -373,7 +373,6 @@ button[type=submit]:hover {
 	margin: 40px 0 20px;
 	text-align: center;
 	color: white;
-	background-color: steelblue;
 }
 
 .omnibus-opening-header h1 {
@@ -382,7 +381,6 @@ button[type=submit]:hover {
 
 .omnibus-opening-header h2 {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: grey;
 }
 
 .omnibus-container {
@@ -398,4 +396,32 @@ button[type=submit]:hover {
 	text-indent: 50px;
 	text-align: justify;
 	text-justify: inter-word;
+}
+
+/*Group pages*/
+.group-header {
+	padding: 2em 1em 1em 1em;
+	margin: 40px 0 20px;
+	text-align: left;
+	color: white;
+}
+
+.group-header img.group-image {
+	position: absolute;
+	width: 128px;
+	height: 128px;
+	box-sizing: content-box;
+	background-color: white;
+	padding: 3px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	margin-right: 0px;
+	left: 15px;
+}
+
+.group-header h1.group-name {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.group-header h2.group-description {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
