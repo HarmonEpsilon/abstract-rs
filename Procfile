@@ -1,1 +1,1 @@
-web: ROCKET_PORT=80 ROCKET_ENV=prod ./target/releast/abstract-rs
+web: ROCKET_ADDRESS=0.0.0.0 ROCKET_PORT=$PORT ROCKET_ENV=prod ./target/releast/abstract-rs
