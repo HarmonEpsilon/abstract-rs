@@ -37,7 +37,7 @@ fn rocket() -> rocket::Rocket {
         about,
         sign_up,
         sign_in,
-        register_user,
+        /*register_user,*/
         omnibus,
         group,
         files

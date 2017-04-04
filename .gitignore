@@ -2,3 +2,6 @@ target/
 **/*.rs.bk
 
 Rocket.toml
+.env
+src/auth/
+src/database/
