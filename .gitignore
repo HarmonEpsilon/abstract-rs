@@ -3,5 +3,3 @@ target/
 
 Rocket.toml
 .env
-src/auth/
-src/database/
