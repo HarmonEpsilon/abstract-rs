@@ -1,9 +1,10 @@
-$(window).on('load', function(){
+//Carousel will run automatically until a click event is triggered within the boundries of the window. The carousel can be advanced forward or backward one slide at a time, or can jump to a slide.
+	$(window).on('load', function(){
 		window.curslide =1;
 		window.inTransition = false;
 		var numslide = $("#carousel > div").length;
 		$("#carousel > div:gt(0)").hide();
-		$(".goto[value = 1]").css({"background-color":"Grey"});
+		$(".goto[value = 1]").html("<i class='fa fa-circle fa-fw' aria-hidden='true'></i>");
 
 		//Hides a specified slide
 		function hideslide(hider){ 
@@ -21,26 +22,24 @@ $(window).on('load', function(){
 
 				if(RL == true){
 					$('#carousel > div:nth-child('+ prevslide +')')
-						.css({"z-index":0})
-						.animate({marginLeft: -600},1100); //Figs: the first number needs to be the width of the carousel; the second is the time it takes for the animation to complete. If you change it, you also need to change the identical number in the next selector.
+						.animate({marginLeft: -1100},1100); //Figs: the first number needs to be the width of the carousel; the second is the time it takes for the animation to complete. If you change it, you also need to change the identical number in the next selector.
 					$('#carousel > div:nth-child('+ newslide +')')
-						.css({"margin-left":"600px","z-index":"1"})
+						.css({"margin-left":"1100px"})
 						.show()
 						.animate({marginLeft: -1},1100,function(){hideslide(prevslide); inTransition = false;}); //Figs: This'n.
 				}
 
 				else{
 					$('#carousel > div:nth-child('+ prevslide +')') 
-						.css({"z-index":0})
-						.animate({marginLeft: 600},1100); //Figs: the first number needs to be the width of the carousel; the second is the time it takes for the animation to complete. If you change it, you also need to change the identical number in the next selector.
+						.animate({marginLeft: 1100},1100); //Figs: the first number needs to be the width of the carousel; the second is the time it takes for the animation to complete. If you change it, you also need to change the identical number in the next selector.
 					$('#carousel > div:nth-child('+ newslide +')')
-						.css({"margin-left":"-600px","z-index":"1"})
+						.css({"margin-left":"-1100px"})
 						.show()
 						.animate({marginLeft: -1},1100,function(){hideslide(prevslide); inTransition = false;}); //Figs: This'n.			
 				}
-				$(".goto[value =" + curslide + "]").css({"background-color":"transparent"});
+				$(".goto[value =" + curslide + "]").html("<i class='fa fa-circle-o fa-fw' aria-hidden='true'></i>");
 				curslide = newslide;
-				$(".goto[value =" + newslide + "]").css({"background-color":"Grey"});
+				$(".goto[value =" + newslide + "]").html("<i class='fa fa-circle fa-fw' aria-hidden='true'></i>");
 			}
 		}
 
