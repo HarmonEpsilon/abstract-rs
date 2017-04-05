@@ -254,7 +254,7 @@ div.error-header div.error-container {
 }
 
 div.body-container {
-	padding: 3em 1em 1em 1em;
+	padding: 2em 1em 1em 1em;
 	max-width: 1300px;
 	margin: 0 auto;
 	text-align: left;
@@ -433,7 +433,7 @@ img.group-image {
     max-width: 1100px;
     margin: 0 auto;
     text-align: left;
-    padding: 4em 1em 1em 1em;
+    padding: 4em 1em 1em 5.5em;
 }
 
 .group-container a.group-button {
@@ -451,13 +451,49 @@ img.group-image {
 	background-color: rebeccapurple;
 }
 
-.group-nav-divider {
-	padding-top: 2em;
-	padding-bottom: 2em;
-	margin: auto;
-	max-width: 860px;
-	max-height: 100px;
+div.groupnav-container {
+	padding: 5em 1em 1em 1em;
+	max-width: 1300px;
+	margin: 0 auto;
 }
+
+.group-nav-divider {
+	position: relative;
+	margin: auto;
+	width: 75%;
+	background-color: white;
+	border: 1px solid lightgrey;
+}
+
+.group-nav-divider .group-nav {
+	list-style-type: none;
+	margin: auto;
+	padding-left: 0px;
+	overflow: hidden;
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.group-nav-divider .group-nav li a {
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.group-nav-divider .group-nav li:hover {
+	background-color: steelblue;
+}
+
+.group-nav-divider .group-nav li a:hover {
+	color: whitesmoke;
+}
+
+.group-nav-divider .group-hori {
+	display: inline-block;
+}
+
 .group-content-heading {
 	border-radius: 4px 4px 0px 0px;
 	text-align: left;
