@@ -4,8 +4,7 @@
     width: $width;
     z-index: $z;
     background-color: $back;
-    border-top: 1px solid $border;
-    border-bottom: 1px solid $border;
+    border: 1px solid $border;
 }
 
 @mixin navitemswidth($maxwidth) {
@@ -105,15 +104,18 @@
 }
 
 /* Group navigation specific items */
-div.group-nav {
-    @include navigation(relative, 65%, -1, whitesmoke, lightgrey);
-    padding: 1em 1em 1em 4em;
+nav.group-nav {
+    @include navigation(relative, 100%, 2, whitesmoke, lightgrey);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .300);
     margin: 0 auto;
 
     .group-nav-list {
-        @include navitemswidth(1300px);
+        @include navitemswidth(1100px);
 
-        li {
+        > li {
+            display: inline-block;
+            float: left;
+
             a {
                 display: block;
                 color: black;
@@ -127,13 +129,8 @@ div.group-nav {
             }
 
             &:hover {
-                background-color: steelblue;
+                background-color: mediumpurple;
             }
         }
     }
-}
-
-.cent {
-    display: inline-block;
-    float: none;
 }
