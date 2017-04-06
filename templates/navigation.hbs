@@ -1,6 +1,6 @@
         {{#if logged_in}}
         <nav id="navbar">
-            <ul id="nav">
+            <ul class="nav">
                 <li class="hori dropdown"><a href="/home">{{title}} <i class="fa fa-angle-down fa-fw" aria-hidden="true"></i></a>
                     <ul class="dropdown-c">
                         <li><a href="#profile"><i class="fa fa-id-card-o fa-fw" aria-hidden="true"></i> Profile</a></li>
@@ -28,7 +28,7 @@
         </nav>
         {{else}}
         <nav id="navbar">
-            <ul id="nav">
+            <ul class="nav">
                 <li class="hori dropdown"><a href="/home">{{title}} <i class="fa fa-angle-down fa-fw" aria-hidden="true"></i></a>
                     <ul class="dropdown-c">
                         <li><a href="/signin"><i class="fa fa-sign-in fa-fw" aria-hidden="true"></i> Sign in</a></li>
@@ -66,14 +66,12 @@
                     </div>
                 </div>
             </div>
-            <div class="groupnav-container">
-                <div class="group-nav-divider">
-                    <ul class="group-nav">
-                        <li class="cent"><a href="#groupsubmit">Submit</a></li>
-                        <li class="cent"><a href="#groupforum">Forum</a></li>
-                        <li class="cent"><a href="#groupfeature">Featured</a></li>
-                        <li class="cent"><a href="#grouphome">Home</a></li>
-                    </ul>
-                </div>
+            <div class="group-nav">
+                <ul class="group-nav">
+                    <li class="cent"><a href="#groupsubmit">Submit</a></li>
+                    <li class="cent"><a href="#groupforum">Forum</a></li>
+                    <li class="cent"><a href="#groupfeature">Featured</a></li>
+                    <li class="cent"><a href="#grouphome">Home</a></li>
+                </ul>
             </div>
         {{/if}}

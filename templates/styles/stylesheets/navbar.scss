@@ -21,6 +21,7 @@
 /* Navbar Styles */
 #navbar {
     @include navigation(fixed, 100%, 2, white, darkgrey);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 
     ul.nav {
         @include navitemswidth(1300px);

@@ -37,7 +37,8 @@ div.foot {
   z-index: 2;
   background-color: white;
   border-top: 1px solid darkgrey;
-  border-bottom: 1px solid darkgrey; }
+  border-bottom: 1px solid darkgrey;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); }
   #navbar ul.nav {
     list-style-type: none;
     margin: auto;
@@ -273,6 +274,27 @@ div.error-header {
     text-align: right;
     font-family: Courier New, Courier, monospace; }
 
+/* Omnibus related styles */
+.omnibus-opening-header {
+  padding: 2em 1em 1em 1em;
+  margin: 40px 0 20px;
+  text-align: center;
+  color: white; }
+
+.omnibus-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 2em 1em 1em 1em;
+  border-left: 1px transparent;
+  border-right: 1px transparent; }
+  .omnibus-container .omnibus-body {
+    padding-left: 25px;
+    padding-right: 25px;
+    text-indent: 50px;
+    text-align: justify;
+    text-justify: inter-word; }
+
 /* Group related styles */
 div.group-header {
   text-align: left;
@@ -291,6 +313,13 @@ div.group-header {
       padding-top: 0;
       font-size: 18px;
       border-bottom: 1px solid white; }
+
+img.group-image {
+  width: 182px;
+  height: 182px;
+  box-sizing: content-box;
+  position: absolute;
+  border: 1px solid lightgrey; }
 
 div.group-container {
   max-width: 1100px;
@@ -436,4 +465,4 @@ button[type=submit] {
   padding-bottom: 10px;
   color: grey; }
 
-/*# sourceMappingURL=stylenew.css.map */
+/*# sourceMappingURL=style.css.map */

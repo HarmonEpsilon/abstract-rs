@@ -141,6 +141,26 @@ div.error-header {
     }
 }
 
+/* Omnibus related styles */
+.omnibus-opening-header {
+    padding: 2em 1em 1em 1em;
+    margin: 40px 0 20px;
+    text-align: center;
+    color: white;
+}
+
+.omnibus-container {
+    @include containers(1000px, left, transparent);
+
+    .omnibus-body {
+        padding-left: 25px;
+        padding-right: 25px;
+        text-indent: 50px;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+}
+
 /* Group related styles */
 div.group-header {
     @include headers(left, whitesmoke, #5D478D);
@@ -159,6 +179,14 @@ div.group-header {
             border-bottom: 1px solid white;
         }
     }
+}
+
+img.group-image {
+    width: 182px;
+    height: 182px;
+    box-sizing: content-box;
+    position: absolute;
+    border: 1px solid lightgrey;
 }
 
 div.group-container {
