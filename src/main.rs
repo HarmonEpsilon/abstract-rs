@@ -18,11 +18,15 @@ extern crate diesel;
 extern crate diesel_codegen;
 extern crate dotenv;
 
+//Other crates
+extern crate rand;
+
 //Custom modules
 mod routes;
 mod errors;
 mod database;
 mod auth;
+mod misc;
 
 //Custom uses
 use routes::*;

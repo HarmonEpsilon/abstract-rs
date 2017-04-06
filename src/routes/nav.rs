@@ -1,7 +1,8 @@
-//For use with main pages (home, etc...)
+//For use specifically with home page
 #[derive(Serialize)]
-pub struct LoggedInNav {
+pub struct HomePage {
     pub title: String,
+    pub motd: String,
     pub logged_in: bool
 }
 

@@ -9,6 +9,7 @@ use std::collections::HashMap;
 
 use nav::*;
 use auth::*;
+use misc::*;
 
 //Redirect to Home 
 #[get("/")]
@@ -19,8 +20,9 @@ pub fn take_me_home() -> Redirect {
 //Get request for Home, output Home template
 #[get("/home")]
 pub fn home() -> Template {
-    let context = LoggedInNav {
+    let context = HomePage {
         title: "[A] ABSTRACT".to_string(),
+        motd: motd(),
         logged_in: is_logged_in(1),
     };
 
