@@ -1,0 +1,61 @@
+/* Boilerplate */
+@mixin default_heading($text, $back, $border) {
+    color: $text;
+    background-color: $back;
+    border-color: $border;
+}
+
+/* Content Box Styles */
+.content-box {
+    margin-bottom: 20px;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+
+    .content-body {
+        padding: 15px;
+    }
+
+    .content-heading {
+        border-radius: 4px 4px 0px 0px;
+        text-align: left;
+        padding: 2px 10px;
+        border-bottom: 1px solid transparent;
+    }
+
+    .content-title {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 16px;
+        color: inherit;
+
+        & > a {
+            color: inherit;
+        }
+    }
+}
+
+.content-box-default {
+    border-color: #ddd;
+}
+
+.content-box-default > .content-heading {
+    @include default_heading(white, #456585, lightgrey);
+}
+
+/* Group-specific styles */
+.content-box-group {
+    border-color: #ddd;
+}
+
+.group-content-heading {
+    border-radius: 4px 4px 0px 0px;
+    text-align: left;
+    padding: 2px 10px;
+    border-bottom: 1px solid transparent;
+} 
+
+.content-box-group > .group-content-heading {
+    @include default_heading(white, mediumpurple, lightgrey);
+}

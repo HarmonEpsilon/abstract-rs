@@ -1,0 +1,138 @@
+/* Boilerplate */
+@mixin navigation($pos, $width, $z, $back, $border) {
+    position: $pos;
+    width: $width;
+    z-index: $z;
+    background-color: $back;
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+}
+
+@mixin navitemswidth($maxwidth) {
+    list-style-type: none;
+    margin: auto;
+    max-width: $maxwidth;
+    padding-left: 0px;
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* Navbar Styles */
+#navbar {
+    @include navigation(fixed, 100%, 2, white, darkgrey);
+
+    ul.nav {
+        @include navitemswidth(1300px);
+
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li:hover {
+            background-color: steelblue;
+        }
+
+        li a:hover {
+            color: whitesmoke;
+        }
+
+        li:hover a {
+            color: whitesmoke;
+        }
+
+        li:hover .dropdown-c a {
+            color: black;
+        }
+
+        .dropdown-c li:hover a {
+            color: white;
+        }
+
+        .dropdown-c a {
+            text-align: left;
+            padding: 10px 26px 10px 10px;
+        }
+
+        .dropdown-c a.right {
+            text-align: left;
+            padding: 10px 107px 10px 10px;
+        }
+    }
+}
+
+.hori {
+    display: inline-block;
+    float: left;
+}
+
+.hori-right {
+    display: inline-block;
+    float: right;
+}
+
+.dropdown-c {
+    display: none;
+	list-style-type: none;
+	text-align: left;
+	margin: 0;
+    padding: 0;
+	position: absolute;
+	z-index: 3;
+	background-color: white;
+	border: 1px solid darkgrey;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+
+    .divider {
+        height: 1px;
+        margin: 9px 0;
+        overflow: hidden;
+        background-color: darkgrey;
+    }
+
+    .divider:hover {
+        background-color: none;
+    }
+}
+
+.dropdown:hover .dropdown-c {
+    display: inline-block;
+}
+
+/* Group navigation specific items */
+div.group-nav {
+    @include navigation(relative, 65%, -1, whitesmoke, lightgrey);
+    padding: 1em 1em 1em 4em;
+    margin: 0 auto;
+
+    .group-nav-list {
+        @include navitemswidth(1300px);
+
+        li {
+            a {
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+
+                &:hover {
+                    color: whitesmoke;
+                }
+            }
+
+            &:hover {
+                background-color: steelblue;
+            }
+        }
+    }
+}
+
+.cent {
+    display: inline-block;
+    float: none;
+}

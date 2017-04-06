@@ -1,0 +1,39 @@
+/* Boilerplate */
+@mixin textfield {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+@mixin formbutton($back, $border, $text, $texth, $backh) {
+    background-color: $back;
+    border: $border;
+    color: $text;
+    padding: 16px 12px;
+    text-decoration: none;
+    border-radius: 2px 2px 2px 2px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    &:hover {
+        color: $texth;
+        background-color: $backh;
+    }
+}
+
+/* Form styles */
+input[type=text] {
+    @include textfield;
+}
+
+input[type=password] {
+    @include textfield;
+}
+
+input[type=email] {
+    @include textfield;
+}
+
+button[type=submit] {
+    @include formbutton(mediumseagreen, black, white, whitesmoke, seagreen);
+}

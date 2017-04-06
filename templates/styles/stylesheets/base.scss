@@ -1,0 +1,44 @@
+/* Sass stylesheet for Abstract.rs 
+ * 
+ * Created by RB and HarmonEpsilon(Figments) of the FimFiction Discord.
+ * April 2017
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 0 100px;
+}
+
+footer {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 75px;
+    width: 100%;
+    font-size: 12px;
+}
+
+div.foot {
+    border-top: 1px solid lightgrey;
+}
+
+@media screen and (min-width: 480px) {
+    padding: 1em;
+}
+
+@import 'navbar';
+@import 'body';
+@import 'form';
+@import 'contentbox';
+@import 'carousel';
