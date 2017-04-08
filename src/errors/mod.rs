@@ -9,7 +9,7 @@ pub fn not_found(req: &Request) -> Template {
     let mut path = HashMap::new();
     path.insert("path", req.uri().as_str());
     path.insert("title", "[A] ABSTRACT");
-    Template::render("error/404", &path)
+    return Template::render("error/404", &path);
 }
 
 //422 Unprocessable Entity
@@ -17,5 +17,5 @@ pub fn not_found(req: &Request) -> Template {
 pub fn unprocessable_entity() -> Template {
     let mut path = HashMap::new();
     path.insert("title", "[A] ABSTRACT");
-    Template::render("error/422", &path)
+    return Template::render("error/422", &path);
 }

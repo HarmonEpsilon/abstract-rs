@@ -35,7 +35,7 @@ use auth::*;
 
 //Gets all routes from modules
 fn rocket() -> rocket::Rocket {
-    rocket::ignite().mount("/", routes![
+    return rocket::ignite().mount("/", routes![
         take_me_home,
         home,
         about,
@@ -48,7 +48,7 @@ fn rocket() -> rocket::Rocket {
     ]).catch(errors![
         not_found,
         unprocessable_entity
-    ])
+    ]);
 }
 
 //Launches server

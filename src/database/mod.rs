@@ -24,5 +24,5 @@ pub fn create_user(conn: &MysqlConnection, user: &str, pass: &str, email: &str) 
         .execute(conn)
         .expect("Error creating new user");
 
-    users.order(id.desc()).first(conn).unwrap()
+    return users.order(id.desc()).first(conn).unwrap();
 }

@@ -10,5 +10,6 @@ pub fn establish_connection() -> MysqlConnection {
 
     let url = env::var("DATABASE_URL").expect("DATABASE_URL must be set!");
 
-    MysqlConnection::establish(&url).expect(&format!("Error connecting to {}", url))
+    return MysqlConnection::establish(&url)
+           .expect(&format!("Error connecting to {}", url));
 }
