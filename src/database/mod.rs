@@ -7,7 +7,6 @@ use rand::os::OsRng;
 use rand::Rng;
 use rand::Rand;
 use std::cell::RefCell;
-use std::string::String;
 
 //Diesel imports
 use diesel;
@@ -20,7 +19,7 @@ use self::models::session_models::{Session, NewSession};
 
 //Other imports
 use base64;
-use bcrypt::{DEFAULT_COST, hash, verify};
+use bcrypt::{DEFAULT_COST, hash};
 
 //Secure generator
 fn secure_gen<T: Rand>() -> T {
