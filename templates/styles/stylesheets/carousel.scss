@@ -33,6 +33,25 @@
 
         div {
             margin: 10px;
+
+            img {
+                width: 128px;
+                height: 128px;
+                box-sizing: content-box;
+                position: absolute;
+                border: 1px solid grey;
+                box-shadow: 0 6px 12px rgba(0, 0, 0, .300);
+            }
+
+            h3 {
+                border-bottom: 1px solid black;
+            }
+
+            p {
+                text-align: justify;
+                text-justify: inter-word;
+                font-style: italic;
+            }
         }
     }
 }
@@ -47,8 +66,8 @@
 }
 
 #forbacknav {
-    transition: opacity 0.2s ease-out;
-    opacity: 0;
+    //transition: opacity 0.2s ease-out;
+    //opacity: 0;
     position: absolute;
     z-index: 1;
     font-size: 24px;

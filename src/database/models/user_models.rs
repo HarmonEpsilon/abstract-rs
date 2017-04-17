@@ -1,5 +1,6 @@
 use database::schema::users;
 
+/* Users */
 #[derive(Queryable)]
 pub struct User {
     pub id: i32,

@@ -431,6 +431,19 @@ button[type=submit] {
     margin-left: -1px; }
     #carousel .slide div {
       margin: 10px; }
+      #carousel .slide div img {
+        width: 128px;
+        height: 128px;
+        box-sizing: content-box;
+        position: absolute;
+        border: 1px solid grey;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); }
+      #carousel .slide div h3 {
+        border-bottom: 1px solid black; }
+      #carousel .slide div p {
+        text-align: justify;
+        text-justify: inter-word;
+        font-style: italic; }
 
 .caronav {
   cursor: pointer;
@@ -440,8 +453,6 @@ button[type=submit] {
   display: inline-block; }
 
 #forbacknav {
-  transition: opacity 0.2s ease-out;
-  opacity: 0;
   position: absolute;
   z-index: 1;
   font-size: 24px;
@@ -462,5 +473,12 @@ button[type=submit] {
   display: inline-block;
   padding-bottom: 10px;
   color: grey; }
+
+/* Boilerplate */
+/* Home styles */
+.top-boxes h3 {
+  font-weight: normal;
+  font-style: normal;
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

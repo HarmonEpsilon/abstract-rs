@@ -1,0 +1,3 @@
+Take the sum of all review ratings, aggregate to generate the rating of the reviewer.
+
+Groups generate global rating by aggregating each member's individual aggregate. 

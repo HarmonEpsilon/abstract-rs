@@ -20,6 +20,8 @@ extern crate dotenv;
 
 //Other crates
 extern crate rand;
+extern crate base64;
+extern crate bcrypt;
 
 //Custom modules
 mod routes;
