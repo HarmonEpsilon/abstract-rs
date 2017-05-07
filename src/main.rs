@@ -22,6 +22,7 @@ extern crate dotenv;
 extern crate rand;
 extern crate base64;
 extern crate bcrypt;
+extern crate cookie;
 
 //Custom modules
 mod routes;
@@ -44,6 +45,7 @@ fn rocket() -> rocket::Rocket {
         sign_up,
         sign_in,
         register_user,
+        login,
         omnibus,
         group,
         files

@@ -2,13 +2,14 @@ pub mod nav;
 
 use rocket::response::Redirect;
 use rocket::response::NamedFile;
+use rocket::http::{Cookie, Cookies};
 use rocket_contrib::Template;
 
 use std::path::{Path, PathBuf};
 use std::collections::HashMap;
 
 use nav::*;
-use auth::signin::*;
+use auth::*;
 use misc::*;
 
 //Redirect to Home 
@@ -19,7 +20,7 @@ pub fn take_me_home() -> Redirect {
 
 //Get request for Home, output Home template
 #[get("/home")]
-pub fn home() -> Template {
+pub fn home(mut cook: &Cookies) -> Template {
     let context = HomePage {
         title: "[A] ABSTRACT".to_string(),
         motd: motd(),

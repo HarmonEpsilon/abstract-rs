@@ -15,11 +15,12 @@ use diesel::mysql::MysqlConnection;
 
 //Custom imports
 use self::models::user_models::{User, NewUser};
-use self::models::session_models::{Session, NewSession};
+use self::models::session_models::NewSession;
 
 //Other imports
 use base64;
 use bcrypt::{DEFAULT_COST, hash};
+use cookie::Cookie;
 
 //Secure generator
 fn secure_gen<T: Rand>() -> T {
@@ -53,7 +54,7 @@ pub fn create_user(conn: &MysqlConnection, user: &str, pass: &str, email: &str) 
 }
 
 //Creates a new session using a user id and generates a session ID using OsRng
-pub fn create_session(conn: &MysqlConnection, user_id: i32) -> Session {
+pub fn create_session(conn: &MysqlConnection, user_id: i32) -> NewSession {
     use database::models::session_models::sessions::table;
 
     let identity: [u8; 24] = secure_gen();
@@ -66,5 +67,5 @@ pub fn create_session(conn: &MysqlConnection, user_id: i32) -> Session {
             .execute(conn)
             .expect("Error creating new session");
 
-    return table.first(conn).unwrap();
+    return new_session;
 }
