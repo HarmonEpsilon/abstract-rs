@@ -58,7 +58,7 @@ pub fn sign_in() -> Template {
     return Template::render("user/signin", &context);
 }
 
-//Get request for Omnibus, outpu Omnibus Template
+//Get request for Omnibus, output Omnibus Template
 #[get("/omnibus")]
 pub fn omnibus() -> Template {
     let context = TableOfContentsNav {
